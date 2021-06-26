@@ -4,4 +4,7 @@
  - Book Hotel Online
  - Online Payament Method
  - Check Booking Status
+ - View Hotel Rooms 
+ - Check Location and Other Detais
+ 
 

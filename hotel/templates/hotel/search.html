@@ -1,0 +1,68 @@
+{% extends 'hotel/header.html' %}
+
+{% block title%} Search Results - Hotel Booking.Com{% endblock %}
+
+
+{% block css %}
+
+{% include 'hotel/all_css/search.css' %}
+
+{% endblock %}
+
+{% block body %}
+
+{% load static %}
+
+<div class="container">
+
+    <!--Slideshow starts here -->
+
+    {% for product, range, nSlides in allProds %}
+    <h5 class="my-4"> Search  Hotels is founded {{product.0.hotel_name}}</h5>
+    <div class="row">
+        <div id="demo{{forloop.counter}}" class="col carousel slide my-3" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#demo{{forloop.counter}}" data-slide-to="0" class="active"></li>
+                {% for i in range %}
+                <li data-target="#demo{{forloop.parentloop.counter}}" data-slide-to="{{i}}"></li>
+                {% endfor %}
+            </ul>
+            <div class="container carousel-inner no-padding">
+                <div class="carousel-item active">
+                    {% for i in product %}
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card align-items-center" style="width: 18rem;">
+                            <img src='/media/{{i.image}}' class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title" id="namepr{{i.id}}">{{i.hotel_name}}</h5>
+                                <h6 class="card-title" >Address : <span id="pricepr{{i.id}}">{{i.address}}</span></h6>
+                                   <a href="/hotel/booking/{{i.id}}"> <button id="pr{{i.id}}" class="btn btn-primary cart">Book Now</button></a>
+                                <a href="/hotel/hotelview/{{i.id}}"><button id="qv{{i.id}}" class="btn btn-primary cart">QuickView</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    {% if forloop.counter|divisibleby:4 and forloop.counter > 0 and not forloop.last %}
+                </div>
+                <div class="carousel-item">
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- left and right controls for the slide -->
+        <a class="carousel-control-prev" href="#demo{{forloop.counter}}" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo{{forloop.counter}}" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block js %}
+
+{% include 'hotel/all_js/search.js' %}
+
+{% endblock %}

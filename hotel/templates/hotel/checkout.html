@@ -1,0 +1,95 @@
+{% extends 'hotel/header.html' %}
+{% load static %}
+{% block title%} Checkout {% endblock %}
+{% block css %}
+
+{% include 'hotel/all_css/footer.css' %}
+
+{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="col my-4">
+        <h2>Step 1 - Your Booking Hotel Details are :</h2>
+   <div class="container my-4">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="/media/{{product.image}}" class="w-100">
+        </div>
+            <!--        col-md-4-->
+        <div class="col-md-8">
+                <h5><b>Hotel Name: {{product.hotel_name}}</b></h5>
+                <p><b> City : {{product.city}}</b></p>
+                <p><b> Address : {{product.address}}</b></p>
+                <p><b>Vip Room Price  One Night Rs. {{product.vprp}} </b></p>
+                <p><b>General Room Price One Night Rs. {{product.grp}} </b></p>
+                <p><b>Hotel Description :</b></p>
+                <p> {{product.desc}}</p>
+        </div>
+    </div> <!--        row-->
+</div>
+    <div class="col my-4">
+        <h2>Step 2 - Enter Your Details & Other Details:</h2>
+        <form method="post" action="/hotel/Order/">{% csrf_token %}
+            <input type="hidden" name="itemsJson" id="itemsJson">
+            <input type="hidden" name="amount" id="amount">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputname">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPhone">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone Number +92">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputhotel">Please Enter the Hotel Name for confirmation </label>
+                    <input type="text" class="form-control" id="hname" name="hname" placeholder= '{{product.hotel_name}}' >
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputRoomtype">Choice Room Type VIP/General</label>
+                    <input type="text" class="form-control" id="room" name="room" placeholder="Enter Type of Room VIP/General">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputtel">Enter Number of Rooms That you want to Book</label>
+                    <input type="tel" class="form-control" id="noroom" name="noroom" placeholder="Enter Number of room that you want to Book">
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Place Order</button>
+        </form>
+    </div>
+</div>
+    </div>
+
+<!--Footer Start-->
+
+<br>
+    <hr>
+	<footer>
+		<div clss="footer-content">
+			<img class = "imglogo" src="{% static 'logoss.png' %}">
+			<p>hello i am paragraph welcome</p>
+			<ul class="socials">
+				<li><a href="#"><i class ="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class ="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class ="fa fa-google-plus"></i></a></li>
+				<li><a href="#"><i class ="fa fa-youtube"></i></a></li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<p>copyright &copy;2021 HotelBooking.Com. designed by <span>Muhammad Ishaq</span></p>
+		</div>
+	</footer>
+
+<!--Footer Ends-->
+{% endblock %}
+
+{% block js %}
+
+{% include 'hotel/all_js/checkout.js' %}
+
+{% endblock %}

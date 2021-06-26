@@ -1,0 +1,26 @@
+<style>
+.porductHeading{
+      text-align: center;
+      position: relative;
+      animation: type 10s infinite;
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: sans-serif ;
+      border-right: 0px solid black;
+      font-weight: bolder;
+      font-size:24px;
+      color: black;
+      width: 100%;
+      margin-top:90px;
+    }
+    @keyframes type{
+      0%{
+        width: 0ch;
+      }
+      50%{
+        width: 83%;
+      }
+      100%{
+        width: 0ch;
+      }
+   </style>

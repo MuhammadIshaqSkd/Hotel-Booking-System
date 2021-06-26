@@ -1,0 +1,94 @@
+
+<style>
+{% load static %}
+
+.col-md-3
+{
+display: inline-block;
+margin-left:-4px;
+<!--margin-top:35rem;-->
+}
+.carousel-indicators .active {
+
+background-color: blue;
+}
+.col-md-3 img{
+width: 230px;
+height: 200px;
+}
+body .carousel-indicator li{
+background-color: blue;
+}
+body .carousel-indicators{
+
+bottom: -40px;
+}
+.carousel-indicators li{
+background-color : #7270fc;
+}
+
+
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon{
+background-color: blue;
+}
+.carousel-control-prev,
+.carousel-control-next{
+top: auto;
+bottom: auto;
+padding-top: 200px;
+}
+body .no-padding{
+padding-left: 0,
+padding-right: 0;
+}
+
+			h1{
+				font-size: 2.1rem;
+				line-height: 1.4;
+				letter-spacing: 0.5rem;
+				text-align: center;
+				color: black;
+				margin-top: 10px;
+				margin-bottom: 30px;
+            font-family: 'Impact', fantasy;
+
+			}
+
+			.maindiv{
+				width: 160vh;
+                height:70vh;
+				left: 50%;
+				top:60%;
+				background-size :100%,100%;
+				box-shadow: 1px 2px 10px 5px  white;
+				animation: slider 5s infinite ease-in-out;
+                opacity: 0.6;
+                 background-repeat: no-repeat;
+                background-size: cover;
+                            }
+			@keyframes slider{
+				0%{background-image: url('{% static "hotel/img10.jpg" %}'); background-repeat: no-repeat;}
+				33%{background-image: url('{% static "hotel/img10.jpg" %}');}
+				66%{background-image: url('{% static "hotel/img9.jpg" %}');}
+				100%{background-image: url('{% static "hotel/img10.jpg" %}');}
+
+			}
+        h5{
+        margin-bottom:50px;
+        text-align: center;
+        }
+        @media screen and (max-width: 768px) {
+        .maindiv{
+	    width: 100%;
+        height:60vh;
+				}
+            }
+
+        @media screen and (max-width: 320px) {
+	    .maindiv{
+	    width: 100%;
+        height:30vh;
+				}
+    }
+   </style>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+
+<!--    Social Media llink CND-->
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>{% block title%} {% endblock %}</title>
+{% block css %}{% endblock %}
+  <style>
+    li{
+<!--        border: 4px solid #90D5EC;-->
+        margin: 8px;
+    }
+
+    li.nav-item:hover{
+		background-color: #f7b42c;
+		background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
+				}
+	li.nav-item a{
+					color: white !important;
+					font-size: 20px;
+					font-family: Roboto Mono;
+				}
+</style>
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <img src="{% static 'logoss.png' %}">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item active" >
+        <a class="nav-link" href="/hotel">Home <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/hotel/Tracker">Booking Status</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/hotel/Contact">Contact Us</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/hotel/about">About Us</a>
+      </li>
+
+    </ul>
+    <form method='get' action='/hotel/search/' class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search" id="search">
+
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+  {% block body %}
+
+
+{% endblock %}
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'js/jquery-3.4.1.min.js' %}">-->
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'js/bootstrap.min.js' %}">-->
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'css/popper.min.js' %}">-->
+
+
+
+
+    {% block js %} {% endblock %}
+  </body>
+</html>

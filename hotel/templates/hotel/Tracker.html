@@ -1,0 +1,64 @@
+{% extends 'hotel/header.html' %}
+{% load static %}
+{% block title%} Booking Status {% endblock %}
+{% block css %}
+
+{% include 'hotel/all_css/footer.css' %}
+
+{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="col my-4">
+        <h2>Enter your Order Id and Email address to track your order</h2>
+        <form method="post" action="#" id="trackerForm">{% csrf_token %}
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputname">Order Id</label>
+                    <input type="text" class="form-control" id="orderId" name="orderId" placeholder="Order Id">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                </div>
+                <button type="submit" class="btn btn-primary">Track Your Booking</button>
+            </div>
+    </div>
+    <div class="col my-4">
+        <h2>Your Booking Status</h2>
+        <div class="my-4">
+            <ul class="list-group" id="items">
+                Enter your order Id and Email and click Track Order to find details about your order!
+            </ul>
+        </div>
+        <h2>Thanks for visiting Hotel Booking.Com</h2>
+    </div>
+</div>
+
+<!--Footer Start-->
+
+<br>
+    <hr>
+	<footer>
+		<div clss="footer-content">
+			<img class = "imglogo" src="{% static 'logoss.png' %}">
+			<p>hello i am paragraph welcome</p>
+			<ul class="socials">
+				<li><a href="#"><i class ="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class ="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class ="fa fa-google-plus"></i></a></li>
+				<li><a href="#"><i class ="fa fa-youtube"></i></a></li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<p>copyright &copy;2021 HotelBooking.Com. designed by <span>Muhammad Ishaq</span></p>
+		</div>
+	</footer>
+
+<!--Footer Ends-->
+{% endblock %}
+
+{% block js %}
+
+{% include 'hotel/all_js/tracker.js' %}
+
+{% endblock %}

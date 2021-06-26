@@ -1,0 +1,76 @@
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+
+	}
+	body{
+		background: #fcfcfc;
+	}
+	footer{
+		background: #111;
+		height: auto;
+		width: 100vw;
+		font-family: "Open Sans";
+		padding-top: 40px;
+		color: #fff;
+	}
+	.footer-content{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+	}
+	 .imglogo{
+		margin-left: 39%;
+		width: 20%;
+	}
+	 p{
+		max-width: 500px;
+		margin: 10px auto;
+		line-height: 28px;
+		font-size: 14px;
+		text-align: center;
+
+	}
+	.socials{
+		list-style: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 1rem 0 3rem 0;
+	}
+	.socials li{
+		margin: 0 10px;
+	}
+	.socials a{
+		text-decoration: none;
+		color: #fff;
+	}
+	.socials a i{
+			font-size: 1.1rem;
+			transition: color .4s ease;
+	}
+	.socials a:hover i{
+		color: aqua;
+
+	}
+	.footer-bottom{
+			background: #000;
+			width: 210vh;
+			padding: 20px 0;
+			text-align: center;
+	}
+	.footer-bottom p{
+		font-size: 14px;
+		word-spacing: 2px;
+		text-transform: capitalize;
+	}
+	.footer-bottom span{
+		text-transform: uppercase;
+		opacity: .4;
+		font-weight: 200;
+	}
+</style>

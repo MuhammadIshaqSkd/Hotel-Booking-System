@@ -1,0 +1,75 @@
+{% extends 'hotel/header.html' %}
+{% load static %}
+{% block title%} {{product.hotel_name}}  Hotel Details {% endblock %}
+{% block css %}
+
+{% include 'hotel/all_css/footer.css' %}
+
+{% endblock %}
+{% block body %}
+<!--Hotel Details-->
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="/media/{{product.image}}" class="w-100">
+        </div>
+            <!--        col-md-4-->
+        <div class="col-md-8">
+                <h5><b>Hotel Name: {{product.hotel_name}}</b></h5>
+                <p><b> City : {{product.city}}</b></p>
+                <p><b> Address : {{product.address}}</b></p>
+                <p><b>Vip Room Price  One Night Rs. {{product.vprp}} </b></p>
+                <p><b>General Room Price One Night Rs. {{product.grp}} </b></p>
+                <p><b>Hotel Description :</b></p>
+                <p> {{product.desc}}</p>
+        </div>
+    </div> <!--        row-->
+</div>  <!--    container-->
+<!--Hotel Details END-->
+
+<!--Hotel Rooms Details -->
+
+<div class="container">
+        <h1 style="text-align:center;font-size:30px;">Rooms<br><br></h1>
+        <div class="row">
+            <!--    VIP Rooms -->
+
+                <div class="col-md-3 ">
+                    <img src="/media/{{product.vpr_img}}" class="card-img-top" style="width: 10rem;height:9rem;border-radius:50%;"alt="...">
+                    <p style="color:black;width: 60px;text-align:center"><b>VIP Rooms</b></p>
+                </div>
+
+            <!--    General Rooms -->
+            <div class="col-md-3 ">
+                    <img src="/media/{{product.gr_img}}" class="card-img-top" style="width: 10rem;height:9rem;border-radius:50%;"alt="...">
+                    <p style="color:black;width: 60px;text-align:center"><b>General Rooms</b></p>
+            </div>
+        </div>
+</div>
+<!--Hotel Rooms Details END -->
+
+<!--Footer Start-->
+
+<br>
+    <hr>
+	<footer>
+		<div clss="footer-content">
+			<img class = "imglogo" src="{% static 'logoss.png' %}">
+			<p>hello i am paragraph welcome</p>
+			<ul class="socials">
+				<li><a href="#"><i class ="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class ="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class ="fa fa-google-plus"></i></a></li>
+				<li><a href="#"><i class ="fa fa-youtube"></i></a></li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<p>copyright &copy;2021 HotelBooking.Com. designed by <span>Muhammad Ishaq</span></p>
+		</div>
+	</footer>
+
+<!--Footer Ends-->
+{% endblock %}
+
+{% block js %}
+{% endblock %}

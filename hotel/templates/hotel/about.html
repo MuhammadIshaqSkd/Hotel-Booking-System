@@ -1,0 +1,90 @@
+{% extends 'hotel/header.html' %}
+
+{% block title%} About Us{% endblock %}
+
+{% block css %}
+
+{% include 'hotel/all_css/about.css' %}
+{% include 'hotel/all_css/footer.css' %}
+
+{% endblock %}
+
+{% block body %}
+
+{% load static %}
+
+<main role="main">
+    <h1 style="text-align:center;margin-top:20px;margin-bottom:20px;">Hotel Booking.Com</h1>
+    <p class="porductHeading text-center">Hotel Booking.Com Pvt Ltd is an Pakistani company that provides easy to get hotels in any where in Pakistan.</p>
+
+<!--    Details -->
+    <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Co-Founders are</h2>
+          <li>Muhammad Ishaq</li><li>Muhammad Ali</li><li>Shahid Ali</li>
+      </div>
+      <div class="col-md-4">
+          <h2>Our Branches in </h2>
+          <li>Islamabad</li><li>Rawalpind</li><li>Lahore</li><li>Karachi </li>
+      </div>
+      <div class="col-md-4">
+        <h2>Contact Us On</h2>
+          <li>Tele No : 05934343434</li><li>Email : hbs@gmail.com</li><li>Feacbook : HBS official</li><li>fax : 02345223234234 </li>
+     </div>
+    </div>
+    <hr>
+  </div> <!-- /container -->
+<!--    Team Members-->
+    <div class="container">
+        <h1 style="text-align:center;">Team Member<br><br></h1>
+        <div class="row">
+                <div class="col-md-4 ">
+                    <img src='{% static "hotel/t1.jpg" %}'class="card-img-top" style="width: 10rem;height:9rem;border-radius:50%;"alt="...">
+                    <p style="color:black;width: 60px;"><b>Muhammad Ishaq</b></p>
+                    <p style="color:black"> Back Hand Developer</p>
+                </div>
+
+            <!--    team member 2-->
+            <div class="col-md-4 ">
+                    <img src='{% static "hotel/t1.jpg" %}'class="card-img-top" style="width: 10rem;height:9rem;border-radius:50%;"alt="...">
+                    <p style="color:black;width: 60px;"><b>Muhammad Ishaq</b></p>
+                    <p style="color:black"> Back Hand Developer</p>
+            </div>
+                 <!--    team member 3-->
+            <div class="col-md-4 ">
+                    <img src='{% static "hotel/t1.jpg" %}'class="card-img-top" style="width: 10rem;height:9rem;border-radius:50%;"alt="...">
+                    <p style="color:black;width: 60px;"><b>Muhammad Ishaq</b></p>
+                    <p style="color:black"> Back Hand Developer</p>
+            </div>
+        </div>
+    </div>
+  <hr>
+<!--Footer Start-->
+
+<br>
+	<footer>
+		<div clss="footer-content">
+			<img class = "imglogo" src="{% static 'logoss.png' %}">
+			<p>hello i am paragraph welcome</p>
+			<ul class="socials">
+				<li><a href="#"><i class ="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class ="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class ="fa fa-google-plus"></i></a></li>
+				<li><a href="#"><i class ="fa fa-youtube"></i></a></li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<p>copyright &copy;2021 HotelBooking.Com. designed by <span>Muhammad Ishaq</span></p>
+		</div>
+	</footer>
+
+<!--Footer Ends-->
+</main>
+
+
+
+
+
+{% endblock %}

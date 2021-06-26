@@ -7,4 +7,10 @@
  - View Hotel Rooms 
  - Check Location and Other Detais
  
+ # Frame Work 
+ - Back Hand Python Django
+ - Font Hand Html Css,Javascrip and jQuery
+ 
+ # Database
+ - Sqlite3
 

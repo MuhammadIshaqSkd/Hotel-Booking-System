@@ -1,4 +1,5 @@
 # Hotel-Booking-System
-Hotel Booking System is developed by Muhammad Ishaq
+# Hotel Booking System has Following Features
 
-This project is base on online hotel booking system 
+. Book Hotel Online
+
